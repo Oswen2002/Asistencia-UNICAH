@@ -34,6 +34,7 @@
         .dropdown-item {
             color: white !important;
             font-weight: bold;
+            font-size: 18px; /* Aumenta tamaño de fuente */
         }
         .dropdown-item:hover {
             background-color: #e09e00; /* Color más oscuro al hacer hover */
@@ -145,7 +146,7 @@
         .calendario-academico h2 {
             font-size: 2rem;
             margin-bottom: 25px;
-            color: #333;
+            color: #002080;
             font-weight: 600;
         }
 
@@ -184,6 +185,69 @@
     .btn-descargar:active {
         transform: translateY(2px); /* Efecto de presionar el botón */
     }
+
+    /* Fondo de la universidad entre el calendario y el mapa */
+    .fondo-universidad {
+        background-image: url('./src/assets/img/Fondos/virgen.jpeg'); /* Aquí debes poner la ruta de la imagen */
+        background-size: cover; /* La imagen cubre toda el área */
+        background-position: center; /* Centra la imagen */
+        background-attachment: fixed; /* La imagen se queda fija cuando se hace scroll */
+        height: 550px; /* Ajusta la altura según tus necesidades */
+        position: relative;
+        margin-top: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle más profundidad */
+        
+    }
+
+    /* Filtro y color de overlay */
+    .fondo-universidad::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Filtro de color oscuro con opacidad */
+        z-index: 1;
+    }
+
+    /* Contenido dentro del banner */
+    .fondo-universidad .contenido-banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .fondo-universidad .contenido-banner h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .fondo-universidad .contenido-banner p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .fondo-universidad .contenido-banner .btn {
+        background-color: #2596be;
+        color: white;
+        border-radius: 25px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .fondo-universidad .contenido-banner .btn:hover {
+        background-color: #1a7fa1; /* Efecto hover: color más oscuro */
+        box-shadow: 0 5px 20px rgba(37, 150, 190, 0.4);
+    }
+
 
     .map-container {
         background: #fff;
@@ -293,7 +357,6 @@
 
 <!-- Calendario Académico -->
 <div class="calendario-academico" id="calendario-container">
-    <h2>Calendario Académico</h2>
     <div class="calendario-imagen">
         <img src="./src/assets/img/Calendarios/Calendario_2025.jpg" alt="Calendario Académico" id="calendario-img">
     </div>
@@ -301,6 +364,15 @@
     <a href="./src/Documentos/Calendario_2025.pdf" download>
         <button class="btn-descargar mt-3">Descargar Calendario Académico</button>
     </a>
+</div>
+
+<!-- Banner de la universidad -->
+<div class="fondo-universidad">
+    <div class="contenido-banner">
+        <h2>¡Tu futuro te espera!</h2>
+        <p>Conoce nuestras carreras y maestrías. ¡Haz realidad tus sueños hoy mismo!</p>
+        <a href="#programas" class="btn">Descubre más</a>
+    </div>
 </div>
 
 <!-- Contenedor del Mapa -->
