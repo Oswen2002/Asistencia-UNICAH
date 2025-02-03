@@ -1,0 +1,26 @@
+.footer {
+    background-color: #002080;
+    color: white;
+    padding: 20px 0 0 0;
+}
+.footer img {
+    max-width: 280px;
+    display: block;
+    margin: 0 auto 10px;
+}
+.footer .divider {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+}
+.footer-bottom {
+    background-color: #081454;
+    padding: 15px 0;
+    color: white;
+}
+.footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
