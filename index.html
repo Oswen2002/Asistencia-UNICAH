@@ -7,297 +7,15 @@
     <link rel="icon" type="image/svg" href="./src/assets/img/Icono_unicah.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/Footer/footer.css">
-    <style>
-        .navbar {
-            /*background-color: #002080;*/
-            background: linear-gradient(90deg, #002080, #0040c0);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .navbar-brand img {
-            height: 50px;
-        }
-        .nav-link {
-            color: white !important;
-        }
-        .navbar-nav {
-            margin: auto;
-            justify-content: center;
-            font-size: 1.2rem; /* Aumenta tamaño de fuente */
-        }
-        
-        /* Mejoras en el hover de los dropdown */
-        .dropdown-menu {
-            background-color: #fdb812;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .dropdown-item {
-            color: white !important;
-            font-weight: bold;
-            font-size: 18px; /* Aumenta tamaño de fuente */
-        }
-        .dropdown-item:hover {
-            background-color: #e09e00; /* Color más oscuro al hacer hover */
-        }
-
-        /* Estilo de la barra de búsqueda en el navbar */
-        .navbar form {
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-top: 5px;
-        }
-
-        .navbar form input {
-            padding-left: 40px;
-            border: 2px solid #ccc;
-            transition: all 0.3s ease;
-            width: 100%;
-            border-radius: 50px;
-        }
-
-        .navbar form input:focus {
-            border-color: #fdb812;
-            box-shadow: 0 0 8px rgba(253, 184, 18, 0.6);
-            outline: none;
-        }
-
-        /* Ícono dentro del botón */
-        .navbar form button {
-            position: absolute;
-            left: 10px;
-            background: none;
-            border: none;
-            color: #666;
-            font-size: 18px;
-        }
-
-        .navbar form button:hover {
-            color: #fdb812;
-        }
-
-
-
-        .presentacion {
-        text-align: center;
-        padding: 50px 10%;
-        background: linear-gradient(135deg, #002080, #0040c0); /* Degradado de azul oscuro a azul más claro */
-        color: white;
-        border-radius: 8px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        margin: 20px 0;
-    }
-
-        .presentacion h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .presentacion p {
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
-
-        .busqueda-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        position: relative;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .busqueda-container input {
-        width: 100%;
-        padding: 14px 20px 14px 50px; /* Añadí un poco de espacio a la izquierda para el ícono */
-        border: 2px solid #cccccc;
-        border-radius: 30px;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .busqueda-container input:focus {
-        border-color: #2596be;
-        box-shadow: 0 0 5px rgba(37, 150, 190, 0.4);
-        outline: none;
-    }
-
-    .busqueda-container .search-icon {
-        position: absolute;
-        left: 15px;  /* Ajuste la distancia desde el borde izquierdo */
-        top: 50%;    /* Lo centra verticalmente */
-        transform: translateY(-50%);
-        color: #cccccc;  /* Color del ícono */
-    }
-
-        /* Estilos para el calendario académico */
-        .calendario-academico {
-            margin-top: 60px;
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .calendario-academico h2 {
-            font-size: 2rem;
-            margin-bottom: 25px;
-            color: #002080;
-            font-weight: 600;
-        }
-
-        .calendario-academico img {
-            width: 90%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid #f0f0f0;
-        }
-
-        .btn-descargar {
-        background-color: #2596be; /* Color de fondo moderno */
-        color: white;
-        padding: 12px 24px;
-        font-size: 16px;
-        border: none;
-        border-radius: 50px; /* Borde redondeado */
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(37, 150, 190, 0.2);
-        outline: none;
-    }
-
-    .btn-descargar:hover {
-        background-color: #1a7fa1; /* Efecto hover: color más oscuro */
-        box-shadow: 0 5px 20px rgba(37, 150, 190, 0.4);
-    }
-
-    .btn-descargar:focus {
-        outline: none;
-        box-shadow: 0 0 10px rgba(37, 150, 190, 0.6); /* Efecto al hacer foco */
-    }
-
-    .btn-descargar:active {
-        transform: translateY(2px); /* Efecto de presionar el botón */
-    }
-
-    /* Fondo de la universidad entre el calendario y el mapa */
-    .fondo-universidad {
-        background-image: url('./src/assets/img/Fondos/virgen.jpeg'); /* Aquí debes poner la ruta de la imagen */
-        background-size: cover; /* La imagen cubre toda el área */
-        background-position: center; /* Centra la imagen */
-        background-attachment: fixed; /* La imagen se queda fija cuando se hace scroll */
-        height: 550px; /* Ajusta la altura según tus necesidades */
-        position: relative;
-        margin-top: 40px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle más profundidad */
-        
-    }
-
-    /* Filtro y color de overlay */
-    .fondo-universidad::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4); /* Filtro de color oscuro con opacidad */
-        z-index: 1;
-    }
-
-    /* Contenido dentro del banner */
-    .fondo-universidad .contenido-banner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        text-align: center;
-        z-index: 2;
-    }
-
-    .fondo-universidad .contenido-banner h2 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .fondo-universidad .contenido-banner p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-
-    .fondo-universidad .contenido-banner .btn {
-        background-color: #2596be;
-        color: white;
-        border-radius: 25px;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .fondo-universidad .contenido-banner .btn:hover {
-        background-color: #1a7fa1; /* Efecto hover: color más oscuro */
-        box-shadow: 0 5px 20px rgba(37, 150, 190, 0.4);
-    }
-
-
-    .map-container {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Animación para los dropdowns */
-@keyframes fadeInDropdown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Aplica la animación a los dropdowns */
-.dropdown-menu {
-    animation: fadeInDropdown 0.3s ease-in-out;
-}
-
-/* Animación de entrada general */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Aplica la animación a los contenedores */
-.presentacion, .calendario-academico, .map-container {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-    </style>
+    <link rel="stylesheet" href="./src/css/index/index.css">
+    <link rel="stylesheet" href="./src/css/Navbar/navbar.css">
 </head>
 <body>
 
 <!-- Menú Superior -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./index.html">
             <img src="./src/assets/img/Icono_unicah.svg" alt="Logo UNICAH">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -386,6 +104,61 @@
     <footer class="footer mt-5 text-center">
         <img src="./src/assets/img/logo_unicah.svg" alt="Logo UNICAH">
         <div class="divider"></div>
+
+        <div class="footer-row">
+            <div class="footer-links">
+                <a href="#"><h4>Sobre Nosotros</h4></a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Guía para estudiantes</h4>
+                <ul>
+                    <li>
+                        <a href="#">¿Qué carrera puedo estudiar?</a>
+                    </li>
+                    <li>
+                        <a href="#">¿Cómo ingreso a la universidad?</a>
+                    </li>
+                    <li>
+                        <a href="#">¿Cómo aplico para una beca?</a>
+                    </li>
+                    <li>
+                        <a href="#">Trámites y documentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Preguntas frecuentes</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Carreras</h4>
+                <ul>
+                    <li>
+                        <a href="#">Pregrados</a>
+                    </li>
+                    <li>
+                        <a href="#">Postgrados</a>
+                    </li>
+                </ul>
+            </div>    
+            
+            <div class="footer-links">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>
+                        <a href="#">Departamentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Docentes</a>
+                    </li>
+                    <li>
+                        <a href="#">Ubicación</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+
         <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center px-3">
             <p class="mb-3 text-center w-100">© 2025 Universidad Católica de Honduras - Todos los derechos reservados.</p>
             <p class="mb-3 text-center w-100">Políticas de privacidad</p>

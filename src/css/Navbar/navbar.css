@@ -1,0 +1,67 @@
+.navbar {
+    /*background-color: #002080;*/
+    background: linear-gradient(90deg, #002080, #0040c0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    height: 50px;
+}
+.nav-link {
+    color: white !important;
+}
+.navbar-nav {
+    margin: auto;
+    justify-content: center;
+    font-size: 1.2rem; /* Aumenta tamaño de fuente */
+}
+
+/* Mejoras en el hover de los dropdown */
+.dropdown-menu {
+    background-color: #fdb812;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dropdown-item {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px; /* Aumenta tamaño de fuente */
+}
+.dropdown-item:hover {
+    background-color: #e09e00; /* Color más oscuro al hacer hover */
+}
+
+/* Estilo de la barra de búsqueda en el navbar */
+.navbar form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+}
+
+.navbar form input {
+    padding-left: 40px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.navbar form input:focus {
+    border-color: #fdb812;
+    box-shadow: 0 0 8px rgba(253, 184, 18, 0.6);
+    outline: none;
+}
+
+/* Ícono dentro del botón */
+.navbar form button {
+    position: absolute;
+    left: 10px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 18px;
+}
+
+.navbar form button:hover {
+    color: #fdb812;
+}

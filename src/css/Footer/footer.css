@@ -24,3 +24,66 @@
     margin: 0 10px;
     font-size: 24px;
 }
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-links {
+    text-align: center;
+    min-width: 200px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f8c146;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-links h4::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #f8c146;
+    margin: 5px auto 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    color: #f8c146;
+    transform: translateX(5px);
+}
+
+.footer-links a h4:hover {
+    color: #f8c146;
+    transition: color 0.3s ease;
+}
