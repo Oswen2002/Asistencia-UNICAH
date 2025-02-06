@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Asistencia - UNICAH</title>
+    <link rel="icon" type="image/svg" href="./src/assets/img/Icono_unicah.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../src/css/Footer/footer.css">
+    <link rel="stylesheet" href="../../src/css/">
+    <link rel="stylesheet" href="../../src/css/Navbar/navbar.css">
+</head>
+<body>
+
+
+    <style>
+  /* Estilos personalizados para el contenido */
+  .content-area h2, .content-area h3, .content-area h4 {
+            color: #002080;
+        }
+        .content-area .section-title {
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .content-area .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .content-area .image-container {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .content-area .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content-area .container {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .content-area .breadcrumb {
+            background-color: transparent;
+        }
+
+        .breadcrumb {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #2596be; /* Color de fondo moderno */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px; /* Borde redondeado */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 150, 190, 0.2);
+    outline: none;
+}
+
+.btn-custom:hover {
+    background-color: #1e7a8a;
+}
+
+    </style>
+
+<!-- Menú Superior -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../src/assets/img/Icono_unicah.svg" alt="Logo UNICAH">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarTogglerBtn">
+            <span class="navbar-toggler-icon" id="togglerIcon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <!-- Agrega ms-auto aquí -->
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guía para estudiantes</a>
+                    <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
+                        <li><a class="dropdown-item" href="#">¿Qué carrera puedo estudiar?</a></li>
+                        <li><a class="dropdown-item" href="#">¿Cómo ingreso a la universidad?</a></li>
+                        <li><a class="dropdown-item" href="#">¿Cómo aplico para una beca?</a></li>
+                        <li><a class="dropdown-item" href="#">Trámites y documentos</a></li>
+                        <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Carreras</a>
+                    <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
+                        <li><a class="dropdown-item" href="#">Pregrado</a></li>
+                        <li><a class="dropdown-item" href="#">Postgrado</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contáctenos</a>
+                    <ul class="dropdown-menu" aria-labelledby="contactoDropdown">
+                        <li><a class="dropdown-item" href="#">Departamentos</a></li>
+                        <li><a class="dropdown-item" href="#">Docentes</a></li>
+                        <li><a class="dropdown-item" href="#">Ubicación</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Barra de búsqueda en el navbar -->
+            <form class="d-flex position-relative">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Breadcrumb de navegación -->
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sobre Nosotros</li>
+        </ol>
+    </nav>
+</div>
+
+<!-- Contenido Principal -->
+<div class="container content-area">
+    <!-- Historia -->
+    <div id="historia">
+        <h2 class="section-title">Historia</h2>
+        <p class="content-text">
+            En el corazón de Honduras, una luz de esperanza y conocimiento, comenzó a brillar en 1990. Así nació la Universidad Católica de Honduras «Nuestra Señora Reina de la Paz». Un grupo de visionarios, entre ellos el Dr. Elio Alvarenga y el Padre Lucas Mcgrath, se unieron en oración y compromiso para crear un espacio educativo que integrara lo académico y lo espiritual. En 1992, el sueño se formalizó cuando Mons. Héctor Enrique Santos aprobó el proyecto y nombró al entonces Arzobispo Auxiliar, Óscar Andrés Cardenal Rodríguez, como coordinador general. El 12 de junio de 1992, UNICAH recibió su primera Erección Canónica, un hito que marcó el inicio de su camino conforme a los estándares de formación de la Sede Apostólica y del Derecho Canónico. El 2 de febrero de 1993, comenzó su primer período académico con 77 estudiantes, ofreciendo carreras que formaban integralmente a los jóvenes hondureños.
+        </p>
+        <div class="image-container">
+            <img src="../../src/assets/img/Sobre nosotros/historia.jpg" alt="Imagen Historia UNICAH">
+        </div>
+        <p class="content-text">
+            Con esfuerzo y dedicación, la UNICAH se ha consolidado como la universidad privada con mayor cobertura en el territorio nacional, brindando a más jóvenes la oportunidad de acceder a una educación superior de calidad. Ha logrado expandirse, diversificando su oferta académica y estableciendo 12 campus a nivel nacional.
+        </p>
+        <div class="image-container">
+            <img src="../../src/assets/img/Sobre nosotros/historia2.jpg" alt="Imagen Historia UNICAH">
+        </div>
+    </div>
+
+    <!-- Propósito -->
+    <div id="proposito">
+        <h2 class="section-title">Propósito</h2>
+        <p class="content-text">
+            Nuestro propósito es inspirar y transformar la sociedad formando líderes comprometidos con el bien común, a través de una educación integral que combina la excelencia académica con el desarrollo de valores éticos y espirituales.
+        </p>
+    </div>
+
+    <!-- Misión -->
+    <div id="mision">
+        <h2 class="section-title">Misión</h2>
+        <p class="content-text">
+            Somos una Universidad Católica que desarrolla líderes éticos preparados para afrontar con éxito los desafíos globales a través de una educación académica con valores cristianos. Con un enfoque humanista fomentamos el pensamiento crítico, la investigación, la innovación y el servicio contribuyendo al crecimiento solidario y al bienestar de la sociedad.
+        </p>
+    </div>
+
+    <!-- Visión -->
+    <div id="vision">
+        <h2 class="section-title">Visión</h2>
+        <p class="content-text">
+            Ser la Universidad Católica líder y referente, reconocida por su excelencia académica y su compromiso con la formación integral de profesionales, capaces de transformar la sociedad y contribuir al bien común inspirados en valores cristianos.
+        </p>
+        <div class="image-container">
+            <img src="../../src/assets/img/Sobre nosotros/Vision.jpg" alt="Imagen Visión UNICAH">
+        </div>
+    </div>
+
+    <!-- Política de Calidad -->
+    <div id="politica-calidad">
+        <h2 class="section-title">Política de Calidad</h2>
+        <p class="content-text">
+            La Universidad Católica de Honduras “Nuestra Señora Reina de la Paz” es una universidad, donde la formación espiritual es tan importante como lo académico. Nos comprometemos permanentemente con la satisfacción de las partes interesadas y en especial con el estudiante, nuestro principal cliente. Cumpliremos con los requisitos establecidos en el sistema de gestión, la mejora continua y la sostenibilidad de los servicios.
+        </p>
+    </div>
+
+    <!-- Valores -->
+    <div id="valores">
+        <h2 class="section-title">Valores</h2>
+        <p class="content-text">
+            Amor, paz, justicia, orden y verdad.
+        </p>
+    </div>
+
+    <!-- Estatutos de la Universidad -->
+    <div id="estatutos">
+        <h2 class="section-title">Estatutos de la Universidad</h2>
+        <p class="content-text">
+            Conoce los estatutos de la Universidad Católica de Honduras. Un documento que valida su constitución y las reglas de su gobierno interno y operaciones.
+        </p>
+        <button class="btn-custom" onclick="window.location.href='#'">Descargar Estatutos</button>
+    </div>
+</div>
+
+
+
+    <footer class="footer mt-5 text-center">
+        <img src="../../src/assets/img/logo_unicah.svg" alt="Logo UNICAH">
+        <div class="divider"></div>
+
+        <div class="footer-row">
+            <div class="footer-links">
+                <a href="#"><h4>Sobre Nosotros</h4></a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Guía para estudiantes</h4>
+                <ul>
+                    <li>
+                        <a href="#">¿Qué carrera puedo estudiar?</a>
+                    </li>
+                    <li>
+                        <a href="#">¿Cómo ingreso a la universidad?</a>
+                    </li>
+                    <li>
+                        <a href="#">¿Cómo aplico para una beca?</a>
+                    </li>
+                    <li>
+                        <a href="#">Trámites y documentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Preguntas frecuentes</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Carreras</h4>
+                <ul>
+                    <li>
+                        <a href="#">Pregrados</a>
+                    </li>
+                    <li>
+                        <a href="#">Postgrados</a>
+                    </li>
+                </ul>
+            </div>    
+            
+            <div class="footer-links">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>
+                        <a href="#">Departamentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Docentes</a>
+                    </li>
+                    <li>
+                        <a href="#">Ubicación</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+
+        <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center px-3">
+            <p class="mb-3 text-center w-100">© 2025 Universidad Católica de Honduras - Todos los derechos reservados.</p>
+            <p class="mb-3 text-center w-100">Políticas de privacidad</p>
+            <div class="social-icons d-flex justify-content-center justify-content-sm-end w-100">
+                <a href="https://www.facebook.com/unicahoficial?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/unicahoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@unicahoficial?_t=8r7fRFHPAsY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/school/universidad-cat%C3%B3lica-de-honduras-%27nuestra-se%C3%B1ora-reina-de-la-paz%27/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@unicahtv" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="../../src/js/animaciones/toggleButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+
+</body>
+</html>

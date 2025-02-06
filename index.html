@@ -13,6 +13,7 @@
 </head>
 <body>
 
+    
 <!-- Menú Superior -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
@@ -25,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto"> <!-- Agrega ms-auto aquí -->
                 <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="./vistas/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guía para estudiantes</a>
                     <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
@@ -70,7 +71,8 @@
         <p>Esta plataforma está diseñada para ayudarte con cualquier consulta académica o administrativa que tengas si eres del campus Jesús Sacramentado. Utiliza la barra de búsqueda para encontrar información rápidamente.</p>
         <div class="busqueda-container">
             <i class="fas fa-search search-icon"></i>
-            <input type="search" placeholder="Buscar en UNICAH...">
+            <input type="text" placeholder="Buscar en UNICAH..." id="search">
+            <ul id="suggestions"></ul>
         </div>
     </div>
 
@@ -173,9 +175,64 @@
         </div>
         
     </footer>
+    <script src="./src/js/datos/data.js"></script>
     <script src="./src/js/animaciones/toggleButton.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+    <script>
+        function normalizarTexto(texto) {
+            return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+    
+        const searchInput = document.getElementById("search");
+        const suggestionsList = document.getElementById("suggestions");
+    
+        // Al hacer clic en una sugerencia
+        searchInput.addEventListener("input", function () {
+            const query = normalizarTexto(searchInput.value.trim());
+            suggestionsList.innerHTML = "";
+    
+            if (query === "") {
+                suggestionsList.style.display = "none";
+                return;
+            }
+    
+            const filteredSuggestions = SobreNosotros.filter(item => 
+                normalizarTexto(item.pregunta).includes(query)
+            );
+    
+            if (filteredSuggestions.length === 0) {
+                suggestionsList.style.display = "none";
+                return;
+            }
+    
+            filteredSuggestions.forEach(suggestion => {
+                const li = document.createElement("li");
+                li.textContent = suggestion.pregunta;
+                li.addEventListener("click", function () {
+                    const sectionId = suggestion.id; // Obtiene el id correspondiente
+                    window.location.href = `./vistas/Sobre Nosotros/sobreNosotros.html#${sectionId}`;
+                    
+                });
+                suggestionsList.appendChild(li);
+            });
+    
+            suggestionsList.style.display = "block";
+        });
+    
+        // Resaltar la sección correspondiente al id en la URL
+        window.addEventListener('load', () => {
+            const sectionId = window.location.hash.replace('#', '');
+            if (sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.style.backgroundColor = '#f0f0f0'; // Resalta la sección
+                    section.scrollIntoView({ behavior: 'smooth' }); // Desplaza suavemente a la sección
+                }
+            }
+        });
+    </script>
+
 
 </body>
 </html>

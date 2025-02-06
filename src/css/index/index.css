@@ -7,30 +7,38 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
 }
-
-    .presentacion h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-    }
-
-    .presentacion p {
-        font-size: 1.1rem;
-        margin-top: 10px;
-    }
-
-    .busqueda-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    position: relative;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+.presentacion {
+    text-align: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #002080, #0040c0);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
 
+.presentacion h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.presentacion p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.busqueda-container {
+display: flex;
+justify-content: center;
+margin-top: 30px;
+position: relative; /* Necesario para posicionar las sugerencias correctamente */
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
 .busqueda-container input {
     width: 100%;
-    padding: 14px 20px 14px 50px; /* Añadí un poco de espacio a la izquierda para el ícono */
+    padding: 14px 20px 14px 50px;
     border: 2px solid #cccccc;
     border-radius: 30px;
     font-size: 16px;
@@ -46,10 +54,40 @@
 
 .busqueda-container .search-icon {
     position: absolute;
-    left: 15px;  /* Ajuste la distancia desde el borde izquierdo */
-    top: 50%;    /* Lo centra verticalmente */
+    left: 15px;
+    top: 50%;
     transform: translateY(-50%);
-    color: #cccccc;  /* Color del ícono */
+    color: #cccccc;
+}
+
+#suggestions {
+border: 1px solid #ccc;
+width: 100%; /* Asegura que tenga el mismo ancho que el buscador */
+max-height: 200px;
+overflow-y: auto;
+position: absolute;
+top: 100%; /* Posiciona las sugerencias justo debajo del input */
+left: 0;
+background: white;
+display: none;
+list-style: none;
+padding: 0;
+margin: 0;
+z-index: 1000;
+border-radius: 5px; /* Bordes redondeados para mejor estética */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#suggestions li {
+padding: 10px;
+cursor: pointer;
+color: black;
+font-size: 16px;
+}
+
+#suggestions li:hover {
+background: #f0f0f0;
 }
 
     /* Estilos para el calendario académico */
