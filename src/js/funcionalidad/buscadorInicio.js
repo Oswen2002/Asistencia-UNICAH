@@ -42,7 +42,7 @@ searchInput.addEventListener("input", function () {
             // Definir los directorios de las páginas
             const pageDirectories = {
                 "Sobre Nosotros": "./vistas/Sobre Nosotros/sobreNosotros.html",
-                "Guia Estudiantil": "./vistas/Guia Estudiantil/guiEstudiantil.html"
+                "Guia Estudiantil": "./vistas/Guia Estudiantil/guiaEstudiantil.html"
             };
 
             // Redirige a la página y sección correctas

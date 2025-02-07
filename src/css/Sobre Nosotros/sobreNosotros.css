@@ -1,0 +1,55 @@
+/* Estilos personalizados para el contenido */
+.content-area h2, .content-area h3, .content-area h4 {
+    color: #002080;
+}
+.content-area .section-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.content-area .content-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.content-area .image-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.content-area .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-area .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.content-area .breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb {
+margin-top: 40px;
+margin-bottom: 20px;
+}
+
+.btn-custom {
+background-color: #2596be; /* Color de fondo moderno */
+color: white;
+padding: 12px 24px;
+font-size: 16px;
+border: none;
+border-radius: 50px; /* Borde redondeado */
+cursor: pointer;
+text-transform: uppercase;
+font-weight: 600;
+transition: all 0.3s ease;
+box-shadow: 0 5px 15px rgba(37, 150, 190, 0.2);
+outline: none;
+}
+
+.btn-custom:hover {
+background-color: #1e7a8a;
+}

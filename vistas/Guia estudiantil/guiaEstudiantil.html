@@ -7,33 +7,91 @@
     <link rel="icon" type="image/svg" href="./src/assets/img/Icono_unicah.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./src/css/Footer/footer.css">
-    <link rel="stylesheet" href="./src/css/index/index.css">
-    <link rel="stylesheet" href="./src/css/Navbar/navbar.css">
+    <link rel="stylesheet" href="../../src/css/Footer/footer.css">
+    <link rel="stylesheet" href="../../src/css/">
+    <link rel="stylesheet" href="../../src/css/Navbar/navbar.css">
 </head>
 <body>
+
+<style>
+    /* Estilos personalizados para el contenido */
+.content-area h2, .content-area h3, .content-area h4 {
+    color: #002080;
+}
+.content-area .section-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.content-area .content-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.content-area .image-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.content-area .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-area .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.content-area .breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb {
+margin-top: 40px;
+margin-bottom: 20px;
+}
+
+.btn-custom {
+background-color: #2596be; /* Color de fondo moderno */
+color: white;
+padding: 12px 24px;
+font-size: 16px;
+border: none;
+border-radius: 50px; /* Borde redondeado */
+cursor: pointer;
+text-transform: uppercase;
+font-weight: 600;
+transition: all 0.3s ease;
+box-shadow: 0 5px 15px rgba(37, 150, 190, 0.2);
+outline: none;
+}
+
+.btn-custom:hover {
+background-color: #1e7a8a;
+}
+</style>
 
 <!-- Menú Superior -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="./index.html">
-            <img src="./src/assets/img/Icono_unicah.svg" alt="Logo UNICAH">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../src/assets/img/Icono_unicah.svg" alt="Logo UNICAH">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarTogglerBtn">
             <span class="navbar-toggler-icon" id="togglerIcon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto"> <!-- Agrega ms-auto aquí -->
-                <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="./vistas/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guía para estudiantes</a>
                     <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
-                        <li><a class="dropdown-item" href="./vistas/Guia estudiantil/guiaEstudiantil.html">¿Qué carrera puedo estudiar?</a></li>
-                        <li><a class="dropdown-item" href="./vistas/Guia estudiantil/guiaEstudiantil.html">¿Cómo ingreso a la universidad?</a></li>
-                        <li><a class="dropdown-item" href="./vistas/Guia estudiantil/guiaEstudiantil.html">¿Cómo aplico para una beca?</a></li>
-                        <li><a class="dropdown-item" href="./vistas/Guia estudiantil/guiaEstudiantil.html">Trámites y documentos</a></li>
-                        <li><a class="dropdown-item" href="./vistas/Guia estudiantil/guiaEstudiantil.html">Preguntas frecuentes</a></li>
+                        <li><a class="dropdown-item" href="#">¿Qué carrera puedo estudiar?</a></li>
+                        <li><a class="dropdown-item" href="#">¿Cómo ingreso a la universidad?</a></li>
+                        <li><a class="dropdown-item" href="#">¿Cómo aplico para una beca?</a></li>
+                        <li><a class="dropdown-item" href="#">Trámites y documentos</a></li>
+                        <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -64,47 +122,20 @@
     </div>
 </nav>
 
-    <!-- Presentación y Barra de Búsqueda -->
-    <div class="presentacion">
-        <h1>Bienvenido a la Plataforma de Asistencia de UNICAH</h1>
-        <p>Esta plataforma está diseñada para ayudarte con cualquier consulta académica o administrativa que tengas si eres del campus Jesús Sacramentado. Utiliza la barra de búsqueda para encontrar información rápidamente.</p>
-        <div class="busqueda-container">
-            <i class="fas fa-search search-icon"></i>
-            <input type="text" placeholder="Buscar en UNICAH..." id="search">
-            <ul id="suggestions"></ul>
-        </div>
-    </div>
 
-<!-- Calendario Académico -->
-<div class="calendario-academico" id="calendario-container">
-    <div class="calendario-imagen">
-        <img src="./src/assets/img/Calendarios/Calendario_2025.jpg" alt="Calendario Académico" id="calendario-img">
-    </div>
-    <!-- Botón para descargar el calendario -->
-    <a href="./src/Documentos/Calendario_2025.pdf" download>
-        <button class="btn-descargar mt-3">Descargar Calendario Académico</button>
-    </a>
+<!-- Breadcrumb de navegación -->
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Guía estudiantil</li>
+        </ol>
+    </nav>
 </div>
 
-<!-- Banner de la universidad -->
-<div class="fondo-universidad">
-    <div class="contenido-banner">
-        <h2>¡Tu futuro te espera!</h2>
-        <p>Conoce nuestras carreras y maestrías. ¡Haz realidad tus sueños hoy mismo!</p>
-        <a href="#programas" class="btn">Descubre más</a>
-    </div>
-</div>
-
-<!-- Contenedor del Mapa -->
-<div class="container mt-5">
-    <h2 class="text-center mb-3">Ubicación del Campus Jesús Sacramentado</h2>
-    <div class="map-container rounded shadow p-3">
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6493.106251552951!2d-87.83531165401699!3d14.609095447779561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f65950c2a62de1b%3A0x35ced69748e8107c!2sUniversidad%20Cat%C3%B3lica%20de%20Honduras!5e0!3m2!1ses-419!2shn!4v1738371925754!5m2!1ses-419!2shn" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</div>
 
     <footer class="footer mt-5 text-center">
-        <img src="./src/assets/img/logo_unicah.svg" alt="Logo UNICAH">
+        <img src="../../src/assets/img/logo_unicah.svg" alt="Logo UNICAH">
         <div class="divider"></div>
 
         <div class="footer-row">
@@ -174,12 +205,9 @@
         </div>
         
     </footer>
-    <script src="./src/js/datos/sugerencias.js"></script>
-    <script src="./src/js/funcionalidad/buscadorInicio.js"></script>
-    <script src="./src/js/animaciones/toggleButton.js"></script>
+    <script src="../../src/js/animaciones/toggleButton.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
-
 
 </body>
 </html>
